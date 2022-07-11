@@ -1,10 +1,15 @@
-
 header .holder img{
     display: inline-block;
+    transition: transform .2s;
 }
 
 header .holder h1{
     display: inline-block;
     color: white;
     margin-left: 1.5rem;
+    transition: transform .2s;
+}
+
+header .holder :hover{
+    transform: scale(1.1);
 }

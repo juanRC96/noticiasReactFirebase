@@ -35,11 +35,11 @@ function Navigation() {
     
               {!context.userLogin &&
               <>
-                <Nav.Link as={Link} to="/" style={{marginLeft:"3rem",marginRight:"3rem", fontSize:"25px"}}>Home</Nav.Link>
-                <Nav.Link as={Link} to="/nosotros" style={{marginLeft:"3rem",marginRight:"3rem", fontSize:"25px"}}>Nosotros</Nav.Link>
-                <Nav.Link as={Link} to="/noticias" style={{marginLeft:"3rem",marginRight:"3rem", fontSize:"25px"}}>Noticias</Nav.Link>
-                <Nav.Link as={Link} to="/contacto" style={{marginLeft:"3rem",marginRight:"3rem", fontSize:"25px"}}>Contacto</Nav.Link>
-                <Nav.Link as={Link} to="/login" style={{marginLeft:"3rem",marginRight:"3rem", fontSize:"25px"}}>Iniciar sesion</Nav.Link>
+                <Nav.Link as={Link} to="/">Home</Nav.Link>
+                <Nav.Link as={Link} to="/nosotros">Nosotros</Nav.Link>
+                <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
+                <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
+                <Nav.Link as={Link} to="/login">Iniciar sesion</Nav.Link>
               </>
               }
             </Nav>

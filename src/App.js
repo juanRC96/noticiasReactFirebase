@@ -31,8 +31,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+      <Header />
       <AuthProvider>
         <Navigation login={login}/>
         <AuthContext>
