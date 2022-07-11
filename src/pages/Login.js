@@ -25,6 +25,7 @@ function Login(){
                     context.loginUser(userInfo.docs[0]?.data())
                 }
                 setSuccess(true)
+                console.log(success)
             }
         } catch (error) {
             //setValidation("2")
