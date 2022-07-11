@@ -73,8 +73,8 @@ function App() {
           }
         </AuthContext>
         </AuthProvider>
+      <Footer/>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

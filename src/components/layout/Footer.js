@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/components/layout/Footer.css"
 
 const Footer = (props) =>{
@@ -12,6 +13,9 @@ const Footer = (props) =>{
             </div>
             <div className="derechos">
                 <p>Derechos reservados. TecnoNews año 2022</p>
+            </div>
+            <div className="administrador">
+                <Link to="login">Administrar</Link>
             </div>
         </footer>
     );

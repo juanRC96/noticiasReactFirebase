@@ -10,6 +10,7 @@ function Noticia(props) {
           <Col style={{marginUp: "1rem", marginBottom:"1rem"}}>
           <Card style={{ height:"100%", width: "100%", marginLeft: "auto", marginRight: "auto", minWidth:"40rem", maxWidth:"60rem"}}>
           <Card.Body>
+          <Card.Text>{props.categoria}</Card.Text>
             <Card.Title><h3>{props.titulo}</h3></Card.Title>
             {
               props.urlImagen !=="" &&

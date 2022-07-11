@@ -8,6 +8,7 @@ export async function getAllNews(){
 export async function createNew(form){
     const querySnapshot = await firebase.firestore().collection("noticias").add(
         {
+            categoria:form.categoria,
             titulo:form.titulo,
             subtitulo:form.subtitulo,
             cuerpo:form.cuerpo,

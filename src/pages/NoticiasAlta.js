@@ -9,6 +9,7 @@ import Alerts from "../components/Alerts";
 
 function NoticiasAlta() {
   const [form, setForm] = useState({
+    categoria: "destacada",
     titulo: "",
     subtitulo: "",
     cuerpo: "",
@@ -83,6 +84,17 @@ function NoticiasAlta() {
         <Alerts variant="success" text="Noticia cargada, redirigiendo..." />
       )}
       <Form className="formulario">
+        <Form.Group className="linea">
+          <Form.Label>Categoría</Form.Label>
+          <Form.Select name="categoria" onChange={handleChange}>
+            <option value="destacada">Destacada</option>
+            <option value="ciencia">Ciencia</option>
+            <option value="gaming">Gaming</option>
+            <option value="review">Review</option>
+            <option value="smartphones">Smartphones</option>
+          </Form.Select>
+        </Form.Group>
+
         <Form.Group className="linea" controlId="titulo">
           <Form.Label>Titulo</Form.Label>
           <Form.Control type="text" name="titulo" onChange={handleChange} />
