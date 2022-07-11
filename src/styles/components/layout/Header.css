@@ -1,0 +1,10 @@
+
+header .holder img{
+    display: inline-block;
+}
+
+header .holder h1{
+    display: inline-block;
+    color: white;
+    margin-left: 1.5rem;
+}

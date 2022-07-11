@@ -1,0 +1,35 @@
+.historia{
+    background-color: rgb(240, 240, 240);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.historia h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.persona{
+    text-align: center;
+}
+
+.persona h6{
+    font-style: italic;
+}
+
+.persona img{
+    border-radius: 50%;
+}
+
+.staff{
+    background-color: rgb(240, 240, 240);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.staff h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
