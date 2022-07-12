@@ -26,6 +26,7 @@ function NoticiasModificar() {
         setValue("cuerpo", response.data().cuerpo);
         setValue("urlImagen", response.data().urlImagen);
         setValue("destacada", response.data().destacada);
+        setValue("fecha", response.data().fecha);
       } catch (e) {
         console.log(e);
       }
@@ -70,10 +71,20 @@ function NoticiasModificar() {
             <option value="destacada">Destacada</option>
             <option value="ciencia">Ciencia</option>
             <option value="gaming">Gaming</option>
-            <option value="review">Review</option>
+            <option value="reviews">Review</option>
             <option value="moviles">Moviles</option>
             {errors.titulo && <span>El campo es obligatorio</span>}
           </Form.Select>
+      </Form.Group>
+
+      <Form.Group className="linea" controlId="fecha">
+        <Form.Label>Fecha</Form.Label>
+        <Form.Control
+          type="date"
+          name="fecha"
+          {...register("fecha", { required: true })}
+        />
+        {errors.titulo && <span>El campo es obligatorio</span>}
       </Form.Group>
 
       <Form.Group className="linea" controlId="titulo">

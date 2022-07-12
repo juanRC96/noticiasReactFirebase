@@ -23,7 +23,8 @@ export async function createNew(form){
             subtitulo:form.subtitulo,
             cuerpo:form.cuerpo,
             urlImagen:form.url,
-            destacada:form.destacada
+            destacada:form.destacada,
+            fecha:form.fecha,
         }
     )
     return querySnapshot.docs

@@ -14,7 +14,8 @@ function NoticiasAlta() {
     subtitulo: "",
     cuerpo: "",
     url: "",
-    destacada: "off"
+    destacada: "off",
+    fecha: ""
   });
   const [image, setImage] = useState(null);
   const [loadingImg, setLoadingImg] = useState("0");
@@ -68,6 +69,7 @@ function NoticiasAlta() {
     const name = event.target.name;
     const value = event.target.value;
     setForm({ ...form, [name]: value });
+    console.log(form)
   };
 
   const handleImage = (event) => {

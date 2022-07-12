@@ -4,7 +4,7 @@ import { getByIdNews } from "../services/NoticiasServices";
 
 function NoticiasDetalle(){
     const {id} = useParams();
-    const [noticia,setNoticia] = useState({categoria:"",titulo:"",subtitulo:"",urlImagen:"",cuerpo:""})
+    const [noticia,setNoticia] = useState({categoria:"",titulo:"",subtitulo:"",urlImagen:"",cuerpo:"",fecha:""})
 
     useEffect(()=>{
         const request = async() =>{
@@ -16,7 +16,8 @@ function NoticiasDetalle(){
 
     return(
         <div className="noticiaDetalle" style={{width:"80%",backgroundColor:"white",marginRight:"auto",marginLeft:"auto", paddingLeft:"10rem", paddingRight:"10rem", paddingTop:"2rem", paddingBottom:"2rem"}}>
-            <p>{noticia.categoria}</p>
+            <p style={{display:"inline-block"}}>{noticia.categoria}</p>
+            <p style={{display:"inline-block", float:"right", fontStyle:"italic"}}>{noticia.fecha}</p>
             <h1>{noticia.titulo}</h1>
             <h4>{noticia.subtitulo}</h4>
             <div className="contenedorImagen">

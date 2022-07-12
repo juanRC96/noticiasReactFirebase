@@ -34,12 +34,12 @@ function Navigation() {
     
               {!context.userLogin &&
               <>
-                <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/noticias">Ultimas noticias</Nav.Link>
-                <Nav.Link as={Link} to="/noticias/categoria/gaming">Gaming</Nav.Link>
-                <Nav.Link as={Link} to="/noticias/categoria/moviles">Móviles</Nav.Link>
-                <Nav.Link as={Link} to="/noticias/categoria/ciencia">Ciencia</Nav.Link>
-                <Nav.Link as={Link} to="/noticias/categoria/reviews">Reviews</Nav.Link>
+                <Nav.Link as={Link} to="/" style={{paddingLeft:"2rem",paddingRight:"2rem",fontSize:"25px"}}>Home</Nav.Link>
+                <Nav.Link as={Link} to="/noticias" style={{paddingLeft:"2rem",paddingRight:"2rem",fontSize:"25px"}}>Ultimas noticias</Nav.Link>
+                <Nav.Link as={Link} to="/noticias/categoria/gaming" style={{paddingLeft:"2rem",paddingRight:"2rem",fontSize:"25px"}}>Gaming</Nav.Link>
+                <Nav.Link as={Link} to="/noticias/categoria/moviles" style={{paddingLeft:"2rem",paddingRight:"2rem",fontSize:"25px"}}>Móviles</Nav.Link>
+                <Nav.Link as={Link} to="/noticias/categoria/ciencia" style={{paddingLeft:"2rem",paddingRight:"2rem",fontSize:"25px"}}>Ciencia</Nav.Link>
+                <Nav.Link as={Link} to="/noticias/categoria/reviews" style={{paddingLeft:"2rem",paddingRight:"2rem",fontSize:"25px"}}>Reviews</Nav.Link>
               </>
               }
             </Nav>
