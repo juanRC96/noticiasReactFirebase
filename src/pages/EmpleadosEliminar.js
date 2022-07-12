@@ -1,7 +1,6 @@
 import { useEffect} from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import "./../styles/components/pages/NoticiasEliminar.css";
 import { deleteEmp, deleteImageEmp, getByIdEmp } from "../services/EmpleadosServices";
 
 function EmpleadosEliminar() {

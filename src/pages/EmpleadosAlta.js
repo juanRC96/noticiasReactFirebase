@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Accordion, Button, Form, Spinner } from "react-bootstrap";
-import "./../styles/components/pages/NoticiasAlta.css";
 import { storage } from "../config/firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useNavigate } from "react-router-dom";

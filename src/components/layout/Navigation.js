@@ -18,8 +18,6 @@ function Navigation() {
               {context.userLogin &&
               <>
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/nosotros">Nosotros</Nav.Link>
-                <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
                 <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
                 <Nav.Link as={Link} to="/balance" >Balance</Nav.Link>
                 <Nav.Link as={Link} to="/empleados">Empleados</Nav.Link>

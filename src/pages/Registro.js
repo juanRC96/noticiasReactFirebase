@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {useForm} from "react-hook-form"
 import {Button,Form} from 'react-bootstrap'
 import firebase from "../config/firebase";
-import "./../styles/components/pages/Registro.css";
 import {useNavigate} from "react-router-dom"
 import Alerts from "../components/Alerts";
 

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Accordion, Button, Form, Spinner } from "react-bootstrap";
 import { createNew } from "../services/NoticiasServices";
-import "./../styles/components/pages/NoticiasAlta.css";
 import { storage } from "../config/firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
@@ -82,7 +81,7 @@ function NoticiasAlta() {
   };
 
   return (
-    <>
+    <div className="holder">
       {success && (
         <Alerts variant="success" text="Noticia cargada, redirigiendo..." />
       )}
@@ -195,7 +194,7 @@ function NoticiasAlta() {
         </Button>
 
       </Form>
-    </>
+    </div>
   );
 }
 export default NoticiasAlta;

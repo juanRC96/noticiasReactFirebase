@@ -7,7 +7,6 @@ import Footer from "./components/layout/Footer";
 
 import ContactoPage from "./pages/ContactoPage";
 import HomePage from "./pages/HomePage";
-import NosotrosPage from "./pages/NosotrosPage";
 
 import "./App.css"
 import NoticiasPage from "./pages/NoticiasPage";
@@ -41,7 +40,6 @@ function App() {
             context=>(
               <Routes>
                   <Route path="/" element={<HomePage />} />
-                  <Route path="nosotros" element={<NosotrosPage />} />
                   <Route path="contacto" element={<ContactoPage />} />
                   <Route path="noticias" element={<NoticiasPage/>} />
                   <Route path="noticias/detalle/:id" element={<NoticiasDetalle/>} />

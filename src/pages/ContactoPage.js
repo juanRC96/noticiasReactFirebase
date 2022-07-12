@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import {Form} from "react-bootstrap";
 import Alerts from "../components/Alerts";
 
-const ContactoPage = (props) => {
+const ContactoPage = () => {
 
   const [alert,setAlert] = useState({variant:"",text:""})
+  const [form,setForm] = useState({nombre:"",email:"",telefono:"",mensaje:""})
 
   const handleClick = (event) =>{
     event.preventDefault();

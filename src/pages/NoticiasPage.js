@@ -3,7 +3,6 @@ import { Button, Row, Spinner } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import Noticia from "../components/Noticia";
 import { getAllNews, getNewsByCat } from "../services/NoticiasServices";
-import "./../styles/components/pages/NoticiasPage.css";
 import AuthContext from "../context/AuthContext";
 
 const NoticiasPage = () => {
@@ -17,13 +16,11 @@ const NoticiasPage = () => {
         const noticias = await getAllNews();
         setNews(noticias);
         setLoading(false);
-        console.log(noticias)
       }
       else if(categoria!==undefined){
         const noticias = await getNewsByCat(categoria);
         setNews(noticias);
         setLoading(false);
-        console.log(noticias)
       }
     };
     request();

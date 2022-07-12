@@ -10,10 +10,7 @@ function Noticia(props) {
           <Col style={{marginUp: "1rem", marginBottom:"1rem"}}>
           <Card style={{ height:"100%", width: "100%", marginLeft: "auto", marginRight: "auto", minWidth:"25rem", maxWidth:"60rem"}}>
           <Card.Body>
-          {
-            context.userLogin &&
-            <Card.Text>{props.categoria}</Card.Text>
-          }
+
           <Card.Text style={{display:"inline-block"}}>{props.categoria}</Card.Text>
           <Card.Text style={{float:"right", display:"inline-block", fontStyle:"italic"}}>{props.fecha}</Card.Text>
             <Link to={"/noticias/detalle/"+props.id} style={{textDecoration: 'none',color:'black'}}><Card.Title style={{textAlign:"center"}}><h3>{props.titulo}</h3></Card.Title></Link>
