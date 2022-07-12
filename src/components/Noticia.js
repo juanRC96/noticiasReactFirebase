@@ -14,13 +14,13 @@ function Noticia(props) {
             context.userLogin &&
             <Card.Text>{props.categoria}</Card.Text>
           }
-            <Card.Title><h3>{props.titulo}</h3></Card.Title>
+            <Link to={"/noticias/detalle/"+props.id} style={{textDecoration: 'none',color:'black'}}><Card.Title><h3>{props.titulo}</h3></Card.Title></Link>
             {
               props.urlImagen !=="" &&
-              <Card.Img variant="top" src={props.urlImagen} style={{height: "25rem", width: "90%", marginUp:"1rem", marginBottom:"1rem", borderRadius:"5px", objectFit:"cover" }}/>
+              <Link to={"/noticias/detalle/"+props.id}><Card.Img variant="top" src={props.urlImagen} style={{height: "25rem", width: "100%", marginUp:"1rem", marginBottom:"1rem", borderRadius:"5px", objectFit:"cover" }}/></Link>
             }
-            <Card.Subtitle><h5>{props.subtitulo}</h5></Card.Subtitle>
-            <Card.Text>{props.cuerpo}</Card.Text>
+            <Link to={"/noticias/detalle/"+props.id} style={{textDecoration: 'none',color:'black'}}><Card.Subtitle><h5>{props.subtitulo}</h5></Card.Subtitle></Link>
+            
             {
               context.userLogin &&
               <>

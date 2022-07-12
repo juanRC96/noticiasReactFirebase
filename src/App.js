@@ -24,6 +24,7 @@ import EmpleadosAlta from "./pages/EmpleadosAlta";
 import EmpleadosEliminar from "./pages/EmpleadosEliminar";
 import EmpleadosModificar from "./pages/EmpleadosModificar";
 import Balance from "./pages/Balance";
+import NoticiasDetalle from "./pages/NoticiasDetalle";
 
 function App() {
 
@@ -43,7 +44,7 @@ function App() {
                   <Route path="nosotros" element={<NosotrosPage />} />
                   <Route path="contacto" element={<ContactoPage />} />
                   <Route path="noticias" element={<NoticiasPage/>} />
-
+                  <Route path="noticias/detalle/:id" element={<NoticiasDetalle/>} />
                   <Route path="noticias/categoria/:categoria" element={<NoticiasPage/>} />
 
                 {

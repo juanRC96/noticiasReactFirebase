@@ -95,6 +95,11 @@ function NoticiasAlta() {
           </Form.Select>
         </Form.Group>
 
+        <Form.Group className="linea" controlId="fecha">
+          <Form.Label>Fecha</Form.Label>
+          <Form.Control type="date" name="fecha" onChange={handleChange} />
+        </Form.Group>
+
         <Form.Group className="linea" controlId="titulo">
           <Form.Label>Titulo</Form.Label>
           <Form.Control type="text" name="titulo" onChange={handleChange} />
