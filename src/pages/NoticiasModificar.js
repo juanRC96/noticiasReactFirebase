@@ -20,10 +20,12 @@ function NoticiasModificar() {
     const request = async () => {
       try {
         const response = await getByIdNews(id);
+        setValue("categoria", response.data().categoria);
         setValue("titulo", response.data().titulo);
         setValue("subtitulo", response.data().subtitulo);
         setValue("cuerpo", response.data().cuerpo);
         setValue("urlImagen", response.data().urlImagen);
+        setValue("destacada", response.data().destacada);
       } catch (e) {
         console.log(e);
       }
@@ -61,6 +63,19 @@ function NoticiasModificar() {
       <Alerts variant={"success"} text={"Datos modificados, redirigiendo..."}></Alerts>
     }
     <Form className="formulario" onSubmit={handleSubmit(onSubmit)}>
+
+    <Form.Group className="linea" controlId="categoria">
+        <Form.Label>Categoría</Form.Label>
+          <Form.Select name="categoria" {...register("categoria", { required: true })}>
+            <option value="destacada">Destacada</option>
+            <option value="ciencia">Ciencia</option>
+            <option value="gaming">Gaming</option>
+            <option value="review">Review</option>
+            <option value="moviles">Moviles</option>
+            {errors.titulo && <span>El campo es obligatorio</span>}
+          </Form.Select>
+      </Form.Group>
+
       <Form.Group className="linea" controlId="titulo">
         <Form.Label>Titulo</Form.Label>
         <Form.Control
@@ -90,6 +105,15 @@ function NoticiasModificar() {
           {...register("cuerpo", { required: true })}
         />
         {errors.cuerpo && <span>El campo es obligatorio</span>}
+      </Form.Group>
+
+      <Form.Group className="linea" controlId="destacada">
+        <Form.Label>Destacada</Form.Label>
+          <Form.Select name="destacada" {...register("destacada", { required: true })}>
+            <option value="off">No</option>
+            <option value="on">Sí</option>
+            {errors.titulo && <span>El campo es obligatorio</span>}
+          </Form.Select>
       </Form.Group>
 
       <Form.Group className="linea" controlId="url">

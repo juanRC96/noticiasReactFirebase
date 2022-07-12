@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import React, { useEffect, useState } from "react";
 import "./../styles/components/pages/HomePage.css";
-import { getAllNews } from "../services/NoticiasServices";
+import { getFeaturedNews } from "../services/NoticiasServices";
 
 const HomePage = (props) => {
 
@@ -10,7 +10,7 @@ const HomePage = (props) => {
 
   useEffect(() => {
     const request = async () => {
-      const noticias = await getAllNews();
+      const noticias = await getFeaturedNews();
       setNews(noticias);
       setLoaded(true);
     };
@@ -22,7 +22,7 @@ const HomePage = (props) => {
       {
         loaded &&
         <Carousel>
-        {news.slice(0, 5).map((n) => (
+        {news.map((n) => (
         <Carousel.Item key={n.id}>
           <img src={n.data().urlImagen} alt={n.id}/>
           <Carousel.Caption>

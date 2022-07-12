@@ -5,6 +5,16 @@ export async function getAllNews(){
     return querySnapshot.docs
 }
 
+export async function getNewsByCat(categoria){
+    const querySnapshot = await firebase.firestore().collection("noticias").where("categoria","==",categoria).get()
+    return querySnapshot.docs
+}
+
+export async function getFeaturedNews(){
+    const querySnapshot = await firebase.firestore().collection("noticias").where("destacada","==","on").get()
+    return querySnapshot.docs
+}
+
 export async function createNew(form){
     const querySnapshot = await firebase.firestore().collection("noticias").add(
         {
@@ -12,7 +22,8 @@ export async function createNew(form){
             titulo:form.titulo,
             subtitulo:form.subtitulo,
             cuerpo:form.cuerpo,
-            urlImagen:form.url
+            urlImagen:form.url,
+            destacada:form.destacada
         }
     )
     return querySnapshot.docs

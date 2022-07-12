@@ -43,6 +43,9 @@ function App() {
                   <Route path="nosotros" element={<NosotrosPage />} />
                   <Route path="contacto" element={<ContactoPage />} />
                   <Route path="noticias" element={<NoticiasPage/>} />
+
+                  <Route path="noticias/categoria/:categoria" element={<NoticiasPage/>} />
+
                 {
                   context.userLogin &&
                   <>

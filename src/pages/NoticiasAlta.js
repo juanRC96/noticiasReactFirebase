@@ -9,11 +9,12 @@ import Alerts from "../components/Alerts";
 
 function NoticiasAlta() {
   const [form, setForm] = useState({
-    categoria: "destacada",
+    categoria: "ciencia",
     titulo: "",
     subtitulo: "",
     cuerpo: "",
     url: "",
+    destacada: "off"
   });
   const [image, setImage] = useState(null);
   const [loadingImg, setLoadingImg] = useState("0");
@@ -87,11 +88,10 @@ function NoticiasAlta() {
         <Form.Group className="linea">
           <Form.Label>Categoría</Form.Label>
           <Form.Select name="categoria" onChange={handleChange}>
-            <option value="destacada">Destacada</option>
             <option value="ciencia">Ciencia</option>
             <option value="gaming">Gaming</option>
-            <option value="review">Review</option>
-            <option value="smartphones">Smartphones</option>
+            <option value="reviews">Review</option>
+            <option value="moviles">Moviles</option>
           </Form.Select>
         </Form.Group>
 
@@ -113,6 +113,14 @@ function NoticiasAlta() {
             name="cuerpo"
             onChange={handleChange}
           />
+        </Form.Group>
+
+        <Form.Group className="linea">
+          <Form.Label>Destacada</Form.Label>
+          <Form.Select name="destacada" onChange={handleChange}>
+            <option value="off">No</option>
+            <option value="on">Sí</option>
+          </Form.Select>
         </Form.Group>
 
         <Accordion className="formulario">
@@ -178,6 +186,7 @@ function NoticiasAlta() {
         <Button variant="primary" type="submit" onClick={handleClick}>
           Guardar
         </Button>
+
       </Form>
     </>
   );
