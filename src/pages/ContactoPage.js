@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./../styles/components/pages/ContactoPage.css"
 import {Form} from "react-bootstrap";
 import Alerts from "../components/Alerts";
 

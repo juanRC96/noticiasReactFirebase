@@ -1,6 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
 import React, { useEffect, useState } from "react";
-import "./../styles/components/pages/HomePage.css";
 import { getFeaturedNews } from "../services/NoticiasServices";
 
 const HomePage = (props) => {

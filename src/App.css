@@ -1,3 +1,5 @@
+/*GENERAL STYLE */
+
 .App {
   background-color: rgb(0, 0, 0);
 }
@@ -6,4 +8,226 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* HOMEPAGE */
+
+.bienvenidos{
+  background-color: rgb(240, 240, 240);
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.columnas .bienvenidos h2{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.carousel{
+  height: 400px;
+}
+
+.carousel-item{
+  height: 400px;
+}
+
+.carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer{
+  background-color: rgb(240, 240, 240);
+  clear: both;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer .redes img{
+  width: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+footer .redes img:hover{
+  opacity: 0.5;
+}
+
+footer .derechos{
+  margin-top: 20px;
+}
+
+/* HEADER */
+
+.header img{
+  display: inline-block;
+  transition: transform .2s;
+}
+
+.header h1{
+  display: inline-block;
+  color: white;
+  margin-left: 1.5rem;
+  transition: transform .2s;
+}
+
+.header :hover{
+  transform: scale(1.1);
+}
+
+/* BALANCE */
+
+.balance{
+  background-color: rgb(240, 240, 240);
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+/* CONTACTO PAGE */
+
+.contacto{
+  display: flex;
+  gap: 24px;
+  background-color: rgb(240, 240, 240);
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.contacto div{
+  width: 100%;
+}
+
+.datos p{
+  font-size: 14px;
+}
+
+.datos ul li{
+  font-size: 13px;
+}
+
+.formulario p{
+  display: flex;
+}
+
+.formulario p label{
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.formulario p input, .formulario p textarea{
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+.formulario p:nth-child(4){
+  align-items: start;
+}
+
+.formulario textarea{
+  resize: none;
+  height: 150px;
+}
+
+.formulario input[type="submit"]{
+  background: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 16px;
+  padding: 6px 20px;
+  width: auto;
+  position: relative;
+  left: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.formulario input[type="submit"]:hover{
+  background-color: #808080;
+}
+
+/* EMPLEADOS */
+
+.empleado{
+  background-color: rgb(200, 200, 200);
+  text-align: center;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  width: 47%;
+}
+
+.empleados{
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+}
+
+/* LOGIN */
+
+.formulario{
+  background-color: rgb(240, 240, 240);
+  padding: 1rem;
+}
+
+.formulario .linea{
+  padding: 10px;
+}
+
+/* NOSOTROS PAGE */
+
+.historia{
+  background-color: rgb(240, 240, 240);
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.historia h2{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.persona{
+  text-align: center;
+}
+
+.persona h6{
+  font-style: italic;
+}
+
+.persona img{
+  border-radius: 50%;
+}
+
+.staff{
+  background-color: rgb(240, 240, 240);
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.staff h2{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
 }

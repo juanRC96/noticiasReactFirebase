@@ -33,8 +33,7 @@ const NoticiasPage = () => {
     <AuthContext>
       {
         context =>(
-          <div className="noticias">
-          <section className="holder">
+          <div className="holder">
             {
               loading && 
               <Spinner variant="primary" animation="border" role="status" style={{width:"4rem", height:"4rem", position: "fixed", top: "50%", left: "50%"}}><span className="visually-hidden">Cargando noticias</span></Spinner>
@@ -46,7 +45,6 @@ const NoticiasPage = () => {
             <Row>
               {news.map((n) => (<Noticia key={n.id} titulo={n.data().titulo} subtitulo={n.data().subtitulo} cuerpo={n.data().cuerpo} id={n.id} urlImagen={n.data().urlImagen} categoria={n.data().categoria}/>))}
             </Row>
-          </section>
         </div>
         )
       }

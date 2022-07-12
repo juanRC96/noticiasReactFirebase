@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import { Accordion, Button, Form, ProgressBar, Table } from "react-bootstrap";
-import {
-  createMove,
-  getAllMovements,
-  deleteMovement,
-} from "../services/BalanceServices";
-import "./../styles/components/pages/Balance.css";
+import { createMove,getAllMovements,deleteMovement } from "../services/BalanceServices";
 
 function Balance() {
   const [form, setForm] = useState({
@@ -89,7 +84,7 @@ function Balance() {
   };
 
   return (
-    <>
+    <div className="holder">
       <div className="balance">
         <h3>Resumen</h3>
         <ProgressBar
@@ -194,7 +189,7 @@ function Balance() {
           </Accordion.Item>
         </Accordion>
       </div>
-    </>
+    </div>
   );
 }
 export default Balance;

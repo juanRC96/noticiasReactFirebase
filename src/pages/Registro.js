@@ -35,7 +35,7 @@ function Registro(){
     }
 
         return(
-            <div>
+            <div className="holder">
                 {
                     success &&
                     <Alerts variant={"success"} text={"Usuario cargado con exito, redirigiendo..."}></Alerts>

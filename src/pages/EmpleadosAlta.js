@@ -73,7 +73,7 @@ function EmpleadosAlta() {
   };
 
   return (
-    <>
+    <div className="holder">
       {
         success &&
         <Alerts variant="success" text="Empleado cargado, redirigiendo..."/>
@@ -157,7 +157,7 @@ function EmpleadosAlta() {
           Guardar
         </Button>
       </Form>
-    </>
+    </div>
   );
 }
 export default EmpleadosAlta;

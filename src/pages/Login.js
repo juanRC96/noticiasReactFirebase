@@ -4,7 +4,6 @@ import {Button,Form} from 'react-bootstrap'
 import fb from "../config/firebase";
 import Alerts from "../components/Alerts";
 import AuthContext from "../context/AuthContext";
-import "./../styles/components/pages/Login.css";
 
 function Login(){
 
@@ -39,7 +38,7 @@ function Login(){
     }
 
     return(
-        <div>
+        <div className="holder">
             {
                 success &&
                 <Alerts variant={"success"} text={"Iniciando sesión..."}/>
