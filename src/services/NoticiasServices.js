@@ -22,6 +22,7 @@ export async function createNew(form){
             titulo:form.titulo,
             subtitulo:form.subtitulo,
             cuerpo:form.cuerpo,
+            epigrafe:form.epigrafe,
             urlImagen:form.url,
             destacada:form.destacada,
             fecha:form.fecha,

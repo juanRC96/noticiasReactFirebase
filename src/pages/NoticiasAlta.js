@@ -12,6 +12,7 @@ function NoticiasAlta() {
     titulo: "",
     subtitulo: "",
     cuerpo: "",
+    epigrafe: "",
     url: "",
     destacada: "off",
     fecha: ""
@@ -119,6 +120,11 @@ function NoticiasAlta() {
             name="cuerpo"
             onChange={handleChange}
           />
+        </Form.Group>
+
+        <Form.Group className="linea">
+          <Form.Label>Epígrafe</Form.Label>
+          <Form.Control type="text" name="epigrafe" onChange={handleChange} />
         </Form.Group>
 
         <Form.Group className="linea">

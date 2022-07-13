@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import {Form} from "react-bootstrap";
-import Alerts from "../components/Alerts";
+import {Button, Form} from "react-bootstrap";
 
 const ContactoPage = () => {
 
@@ -9,7 +8,10 @@ const ContactoPage = () => {
 
   const handleClick = (event) =>{
     event.preventDefault();
-    setAlert({variant:"primary",text:"Datos guardados con exito"})
+  }
+
+  const handleChange = (event) => {
+
   }
 
 
@@ -17,28 +19,39 @@ const ContactoPage = () => {
     <main className="holder contacto">
       <div>
         <h2>Contacto Rápido</h2>
-        <Form action="" method="" className="formulario" onSubmit={handleClick}>
-          <p>
-            <label htmlFor="nombre">Nombre</label>
-            <input type="text" name=""></input>
-          </p>
-          <p>
-            <label htmlFor="email">Email</label>
-            <input type="text" name=""></input>
-          </p>
-          <p>
-            <label htmlFor="telefono">Telefono</label>
-            <input type="text" name=""></input>
-          </p>
-          <p>
-            <label htmlFor="mensaje">Mensaje</label>
-            <textarea name=""></textarea>
-          </p>
-          <p className="acciones">
-            <input type="submit" value="Enviar" />
-          </p>
-          <Alerts variant={alert.variant} text={alert.text}/>
-        </Form>
+
+        <Form className="formulario">
+
+      <Form.Group className="linea">
+        <Form.Label>Nombre</Form.Label>
+        <Form.Control type="text" name="nombre" onChange={handleChange}/>
+      </Form.Group>
+
+      <Form.Group className="linea">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="email" name="email" onChange={handleChange}/>
+      </Form.Group>
+
+      <Form.Group className="linea">
+        <Form.Label>Telefono</Form.Label>
+        <Form.Control type="number" name="telefono" onChange={handleChange}/>
+      </Form.Group>
+
+      <Form.Group className="linea">
+          <Form.Label>Mensaje</Form.Label>
+          <Form.Control
+            as="textarea"
+            type="text"
+            name="mensaje"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+      <Button variant="dark" type="submit">
+        Enviar
+      </Button>
+    </Form>
+
       </div>
       <div className="datos">
         <h2>Otras vias de comunicacion</h2>

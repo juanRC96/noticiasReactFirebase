@@ -6,7 +6,7 @@ import { getByIdNews } from "../services/NoticiasServices";
 function NoticiasDetalle(){
     const {id} = useParams();
     const [loading,setLoading] = useState(true)
-    const [noticia,setNoticia] = useState({categoria:"",titulo:"",subtitulo:"",urlImagen:"",cuerpo:"",fecha:""})
+    const [noticia,setNoticia] = useState({categoria:"",titulo:"",subtitulo:"",urlImagen:"",cuerpo:"",epigrafe:"",fecha:""})
 
     useEffect(()=>{
         const request = async() =>{
@@ -25,15 +25,21 @@ function NoticiasDetalle(){
             }
             {
                 !loading &&
-                <div className="noticiaDetalle" style={{width:"80%",backgroundColor:"white",marginRight:"auto",marginLeft:"auto", paddingLeft:"10rem", paddingRight:"10rem", paddingTop:"2rem", paddingBottom:"2rem"}}>
+                <div className="noticiaDetalle" style={{width:"80%",backgroundColor:"white",marginRight:"auto",marginLeft:"auto", paddingLeft:"3rem", paddingRight:"3rem", paddingTop:"2rem", paddingBottom:"2rem"}}>
                     <p style={{display:"inline-block"}}>{noticia.categoria}</p>
                     <p style={{display:"inline-block", float:"right", fontStyle:"italic"}}>{noticia.fecha}</p>
-                    <h1>{noticia.titulo}</h1>
-                    <h4>{noticia.subtitulo}</h4>
-                    <div className="contenedorImagen">
-                    <img src={noticia.urlImagen} alt="" style={{width:"100%"}}/>
+                    <h1 style={{textAlign:"center"}}>{noticia.titulo}</h1>
+                    <p style={{textAlign:"center",fontSize:"22px"}}>{noticia.subtitulo}</p>
+                    
+                    <div style={{width:"100%",marginTop:"2rem"}}>
+                        <div className="cuerpo" style={{width:"46%",display:"inline-block",marginRight:"4%"}}>
+                            <p style={{fontSize:"18px"}}>{noticia.cuerpo}</p>
+                        </div>
+                        <div className="contenedorImagen" style={{width:"46%",display:"inline-block",verticalAlign: "top",marginLeft:"4%"}}>
+                            <img src={noticia.urlImagen} alt="" style={{width:"100%",borderRadius:"10px"}}/>
+                            <p style={{textAlign:"center"}}>{noticia.epigrafe}</p>
+                        </div>
                     </div>
-                    <p>{noticia.cuerpo}</p>
                 </div>
             }
         </>
