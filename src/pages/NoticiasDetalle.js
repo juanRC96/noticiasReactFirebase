@@ -25,17 +25,17 @@ function NoticiasDetalle(){
             }
             {
                 !loading &&
-                <div className="noticiaDetalle" style={{width:"80%",backgroundColor:"white",marginRight:"auto",marginLeft:"auto", paddingLeft:"3rem", paddingRight:"3rem", paddingTop:"2rem", paddingBottom:"2rem"}}>
+                <div className="noticiaDetalle" style={{width:"80%",backgroundColor:"white",marginRight:"auto",marginLeft:"auto", paddingLeft:"3%", paddingRight:"3%", paddingTop:"2rem", paddingBottom:"2rem"}}>
                     <p style={{display:"inline-block"}}>{noticia.categoria}</p>
                     <p style={{display:"inline-block", float:"right", fontStyle:"italic"}}>{noticia.fecha}</p>
                     <h1 style={{textAlign:"center"}}>{noticia.titulo}</h1>
                     <p style={{textAlign:"center",fontSize:"22px"}}>{noticia.subtitulo}</p>
                     
                     <div style={{width:"100%",marginTop:"2rem"}}>
-                        <div className="cuerpo" style={{width:"46%",display:"inline-block",marginRight:"4%"}}>
+                        <div className="cuerpo" style={{width:"48%",display:"inline-block",marginRight:"2%"}}>
                             <p style={{fontSize:"18px"}}>{noticia.cuerpo}</p>
                         </div>
-                        <div className="contenedorImagen" style={{width:"46%",display:"inline-block",verticalAlign: "top",marginLeft:"4%"}}>
+                        <div className="contenedorImagen" style={{width:"48%",display:"inline-block",verticalAlign: "top",marginLeft:"2%"}}>
                             <img src={noticia.urlImagen} alt="" style={{width:"100%",borderRadius:"10px"}}/>
                             <p style={{textAlign:"center"}}>{noticia.epigrafe}</p>
                         </div>
