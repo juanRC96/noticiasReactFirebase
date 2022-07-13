@@ -19,6 +19,7 @@ function Navigation() {
               <>
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
                 <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
+                <Nav.Link as={Link} to="/mensajes" >Mensajes</Nav.Link>
                 <Nav.Link as={Link} to="/balance" >Balance</Nav.Link>
                 <Nav.Link as={Link} to="/empleados">Empleados</Nav.Link>
                 <Nav.Link as={Link} to="/empleados/alta">Crear empleado</Nav.Link>

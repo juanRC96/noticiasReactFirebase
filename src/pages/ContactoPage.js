@@ -1,21 +1,43 @@
 import React, { useState } from "react";
-import {Button, Form} from "react-bootstrap";
+import {Alert, Button, Form} from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { createMessage } from "../services/ContactoServices";
 
 const ContactoPage = () => {
 
-  const [alert,setAlert] = useState({variant:"",text:""})
-  const [form,setForm] = useState({nombre:"",email:"",telefono:"",mensaje:""})
+  const [form,setForm] = useState({nombre:"",email:"",telefono:"",mensaje:""});
+  const [loading,setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleClick = (event) =>{
+  const handleClick = async(event) =>{
     event.preventDefault();
+    setLoading(true)
+    try{
+      await createMessage(form);
+      setLoading(false)
+      navigate("/")
+
+    }catch(error){
+      console.log(error)
+      setLoading(false)
+    }
   }
 
   const handleChange = (event) => {
-
-  }
+    const name = event.target.name;
+    const value = event.target.value;
+    setForm({ ...form, [name]: value });
+    console.log(form)
+  };
 
 
   return (
+    <>
+    {
+      loading &&
+      <Alert variant="primary">Guardando mensaje...</Alert>
+    }
+
     <main className="holder contacto">
       <div>
         <h2>Contacto Rápido</h2>
@@ -47,7 +69,7 @@ const ContactoPage = () => {
           />
         </Form.Group>
 
-      <Button variant="dark" type="submit">
+      <Button variant="dark" type="submit" onClick={handleClick}>
         Enviar
       </Button>
     </Form>
@@ -64,6 +86,7 @@ const ContactoPage = () => {
         </ul>
       </div>
     </main>
+    </>
   );
 };
 

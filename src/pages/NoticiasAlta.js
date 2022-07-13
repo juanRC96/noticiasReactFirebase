@@ -70,7 +70,6 @@ function NoticiasAlta() {
     const name = event.target.name;
     const value = event.target.value;
     setForm({ ...form, [name]: value });
-    console.log(form)
   };
 
   const handleImage = (event) => {

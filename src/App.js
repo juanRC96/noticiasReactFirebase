@@ -24,6 +24,7 @@ import EmpleadosEliminar from "./pages/EmpleadosEliminar";
 import EmpleadosModificar from "./pages/EmpleadosModificar";
 import Balance from "./pages/Balance";
 import NoticiasDetalle from "./pages/NoticiasDetalle";
+import Mensajes from "./pages/Mensajes";
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
                   <>
                     <Route path="create" element={<Registro/>} />
                     <Route path="balance" element={<Balance/>} />
+                    <Route path="mensajes" element={<Mensajes/>} />
                     <Route path="empleados" element={<Empleados/>} />
                     <Route path="empleados/alta" element={<EmpleadosAlta/>} />
                     <Route path="empleados/modificar/:id" element={<EmpleadosModificar/>} />

@@ -32,7 +32,7 @@ function Empleados(){
             {loading && 
             <Spinner variant="primary" animation="border" role="status" style={{width:"4rem", height:"4rem", position: "fixed", top: "50%", left: "50%"}}><span className="visually-hidden">Cargando noticias</span></Spinner>
             }
-          <Row>
+          <Row style={{marginTop:"1rem", marginBottom:"1rem"}}>
             {employees.map((e)=><Empleado key={e.id} id={e.id} apellido={e.data().apellido} nombre={e.data().nombre} cargo={e.data().cargo} salario={e.data().salario} urlImagen={e.data().urlImagen}/>)}
           </Row>
           <div className="egresos">

@@ -4,7 +4,7 @@ import {Button} from "react-bootstrap";
 
 function Empleado(props) {
   return (
-    <Card style={{ width: "18rem"}}>
+    <Card style={{ width: "18rem", marginLeft:"1rem", marginRight:"1rem"}}>
       <Card.Img variant="top" src={props.urlImagen}/>
       <Card.Body>
         <Card.Title>{props.apellido}, {props.nombre}</Card.Title>
