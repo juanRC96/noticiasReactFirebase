@@ -13,6 +13,7 @@ function NoticiasAlta() {
     subtitulo: "",
     cuerpo: "",
     epigrafe: "",
+    autor:"",
     url: "",
     destacada: "off",
     fecha: ""
@@ -133,6 +134,11 @@ function NoticiasAlta() {
             <option value="off">No</option>
             <option value="on">Sí</option>
           </Form.Select>
+        </Form.Group>
+
+        <Form.Group className="linea" controlId="autor">
+          <Form.Label>Autor</Form.Label>
+          <Form.Control type="text" name="autor" onChange={handleChange} />
         </Form.Group>
 
         <Accordion className="formulario">

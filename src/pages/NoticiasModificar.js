@@ -25,6 +25,7 @@ function NoticiasModificar() {
         setValue("subtitulo", response.data().subtitulo);
         setValue("cuerpo", response.data().cuerpo);
         setValue("epigrafe", response.data().epigrafe);
+        setValue("autor", response.data().autor);
         setValue("urlImagen", response.data().urlImagen);
         setValue("destacada", response.data().destacada);
         setValue("fecha", response.data().fecha);
@@ -136,6 +137,16 @@ function NoticiasModificar() {
             <option value="on">Sí</option>
             {errors.titulo && <span>El campo es obligatorio</span>}
           </Form.Select>
+      </Form.Group>
+
+      <Form.Group className="linea" controlId="autor">
+        <Form.Label>Autor</Form.Label>
+        <Form.Control
+          type="text"
+          name="autor"
+          {...register("autor", { required: true })}
+        />
+        {errors.subtitulo && <span>El campo es obligatorio</span>}
       </Form.Group>
 
       <Form.Group className="linea" controlId="url">
