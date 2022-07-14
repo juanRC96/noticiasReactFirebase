@@ -21,7 +21,7 @@ function Noticia(props) {
   };
 
   return (
-    <AuthContext>
+    <AuthContext.Consumer>
       {(context) => (
         <div
           className="carta"
@@ -82,7 +82,7 @@ function Noticia(props) {
             to={"/noticias/detalle/" + props.id}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <h6 style={{ textAlign: "center" }}>{props.subtitulo}</h6>
+            <h5 style={{ textAlign: "center" }}>{props.subtitulo}</h5>
           </Link>
 
           {context.userLogin && (
@@ -97,7 +97,7 @@ function Noticia(props) {
           )}
         </div>
       )}
-    </AuthContext>
+    </AuthContext.Consumer>
   );
 }
 

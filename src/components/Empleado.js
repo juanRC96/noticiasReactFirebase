@@ -18,7 +18,7 @@ function Empleado(props) {
   }
 
   return (
-    <Card style={{ width: "18rem", marginLeft:"1rem", marginRight:"1rem"}}>
+    <Card style={{ width: "18rem", marginTop:"1rem",marginBottom:"1rem", marginLeft:"auto",marginRight:"auto"}}>
       <Card.Img variant="top" src={props.urlImagen}/>
       <Card.Body>
         <Card.Title>{props.apellido}, {props.nombre}</Card.Title>

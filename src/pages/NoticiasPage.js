@@ -28,7 +28,7 @@ const NoticiasPage = () => {
   }, [categoria,refresh]);
 
   return (
-    <AuthContext>
+    <AuthContext.Consumer>
       {
         context =>(
           <div className="holder">
@@ -46,7 +46,7 @@ const NoticiasPage = () => {
             </div>
         )
       }
-    </AuthContext>
+    </AuthContext.Consumer>
   );
 };
 

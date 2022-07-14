@@ -23,7 +23,6 @@ function Balance() {
       totalExpenses(mov);
     };
     response();
-    console.log("se ejecuto el useEffect");
   }, [refresh]);
 
   const deleteMove = async (id) => {
@@ -105,7 +104,7 @@ function Balance() {
 
       <div className="contenedor">
         <h3>Tabla</h3>
-        <Table striped bordered hover style={{ fontSize: "20px" }}>
+        <Table striped bordered hover style={{ fontSize: "2vw" }}>
           <thead>
             <tr>
               <th>Tipo</th>
@@ -116,7 +115,7 @@ function Balance() {
           </thead>
           <tbody>
             {movements.map((m) => (
-              <tr>
+              <tr key={m.id}>
                 <td>{m.data().tipo}</td>
                 <td>{m.data().detalle}</td>
                 <td>${parseFloat(m.data().valor).toLocaleString("es")}</td>

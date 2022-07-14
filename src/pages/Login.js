@@ -38,6 +38,7 @@ function Login(){
 
     return(
         <div className="holder">
+            <div className="contenedor">
             <Form className="formulario" onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="linea" controlId="formBasicEmail">
                     <Form.Label>Email</Form.Label>
@@ -53,6 +54,7 @@ function Login(){
                 <Button variant="primary" type="submit">Ingresar</Button>{' '}
                 <Alert variant={alert.variant}>{alert.text}</Alert>
             </Form>
+        </div>
         </div>
         )
     }
