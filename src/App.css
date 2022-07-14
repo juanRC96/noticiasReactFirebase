@@ -1,7 +1,7 @@
 /*GENERAL STYLE */
 
 .App {
-  background-color: rgb(0, 0, 0);
+  background-image: url("/public/images/background.jpg");
 }
 
 .holder{
@@ -13,24 +13,19 @@
 
 /* HOMEPAGE */
 
-.bienvenidos{
+.contenedor{
   background-color: rgb(240, 240, 240);
   padding: 2rem;
   margin-top: 2rem;
   border-radius: 10px;
 }
 
-.columnas .bienvenidos h2{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-style: italic;
-}
-
 .carousel{
-  height: 400px;
+  height: 420px;
 }
 
 .carousel-item{
-  height: 400px;
+  height: 420px;
 }
 
 .carousel-item img{
@@ -79,15 +74,6 @@ footer .derechos{
 
 .header :hover{
   transform: scale(1.1);
-}
-
-/* BALANCE */
-
-.balance{
-  background-color: rgb(240, 240, 240);
-  padding: 2rem;
-  margin-top: 2rem;
-  border-radius: 10px;
 }
 
 /* CONTACTO PAGE */

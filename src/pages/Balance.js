@@ -85,7 +85,7 @@ function Balance() {
 
   return (
     <div className="holder">
-      <div className="balance">
+      <div className="contenedor">
         <h3>Resumen</h3>
         <ProgressBar
           variant="success"
@@ -103,7 +103,7 @@ function Balance() {
         />
       </div>
 
-      <div className="balance">
+      <div className="contenedor">
         <h3>Tabla</h3>
         <Table striped bordered hover style={{ fontSize: "20px" }}>
           <thead>
@@ -148,7 +148,7 @@ function Balance() {
         </Table>
       </div>
 
-      <div className="balance">
+      <div className="contenedor">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="1">
             <Accordion.Header>Agregar movimiento</Accordion.Header>

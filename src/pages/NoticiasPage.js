@@ -40,10 +40,10 @@ const NoticiasPage = () => {
               context.userLogin &&
               <Button as={Link} to="/noticias/alta" style={{justifyContent:"center",display:"flex", marginBottom:"2rem"}}>Nueva noticia</Button>
             }
-            <Row>
+            <Row style={{marginTop:"1rem",marginBottom:"1rem"}}>
               {news.map((n) => (<Noticia key={n.id} titulo={n.data().titulo} subtitulo={n.data().subtitulo} cuerpo={n.data().cuerpo} id={n.id} urlImagen={n.data().urlImagen} categoria={n.data().categoria} fecha={n.data().fecha} setRefresh={setRefresh}/>))}
             </Row>
-        </div>
+            </div>
         )
       }
     </AuthContext>

@@ -35,6 +35,7 @@ function Registro(){
 
         return(
             <div className="holder">
+            <div className="contenedor">
                 {
                     success &&
                     <Alerts variant={"success"} text={"Usuario cargado con exito, redirigiendo..."}></Alerts>
@@ -63,6 +64,7 @@ function Registro(){
                 </Form.Group>
                 <Button variant="primary" type="submit">Registrar</Button>{' '}
                 </Form>
+            </div>
             </div>
         )
     }

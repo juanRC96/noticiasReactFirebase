@@ -35,9 +35,7 @@ const HomePage = (props) => {
         ))}
       </Carousel>
       }
-
-      <div className="columnas">
-        <div className="bienvenidos">
+        <div className="contenedor">
           <h2>Bienvenidos</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -66,7 +64,6 @@ const HomePage = (props) => {
             imperdiet metus, ac tincidunt quam enim non sem.
           </p>
         </div>
-      </div>
     </main>
   );
 };
