@@ -7,7 +7,7 @@ import { NavDropdown } from "react-bootstrap";
 function Navigation() {
 
   return (
-    <AuthContext>
+    <AuthContext.Consumer>
       {
         context => (
           <Navbar bg="dark" expand="lg" variant="dark">
@@ -46,7 +46,7 @@ function Navigation() {
         </Navbar>
         )
       }
-    </AuthContext>
+    </AuthContext.Consumer>
   );
 }
 

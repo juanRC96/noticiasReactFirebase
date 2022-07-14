@@ -9,6 +9,7 @@ const NoticiasPage = () => {
   const {categoria} = useParams();
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [refresh, setRefresh] = useState(0);
 
   useEffect(() => {
     const request = async () => {
@@ -24,7 +25,7 @@ const NoticiasPage = () => {
       }
     };
     request();
-  }, [categoria]);
+  }, [categoria,refresh]);
 
   return (
     <AuthContext>
@@ -40,7 +41,7 @@ const NoticiasPage = () => {
               <Button as={Link} to="/noticias/alta" style={{justifyContent:"center",display:"flex", marginBottom:"2rem"}}>Nueva noticia</Button>
             }
             <Row>
-              {news.map((n) => (<Noticia key={n.id} titulo={n.data().titulo} subtitulo={n.data().subtitulo} cuerpo={n.data().cuerpo} id={n.id} urlImagen={n.data().urlImagen} categoria={n.data().categoria} fecha={n.data().fecha}/>))}
+              {news.map((n) => (<Noticia key={n.id} titulo={n.data().titulo} subtitulo={n.data().subtitulo} cuerpo={n.data().cuerpo} id={n.id} urlImagen={n.data().urlImagen} categoria={n.data().categoria} fecha={n.data().fecha} setRefresh={setRefresh}/>))}
             </Row>
         </div>
         )

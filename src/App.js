@@ -12,7 +12,6 @@ import "./App.css"
 import NoticiasPage from "./pages/NoticiasPage";
 import NoticiasAlta from "./pages/NoticiasAlta";
 import NoticiasModificar from "./pages/NoticiasModificar";
-import NoticiasEliminar from "./pages/NoticiasEliminar";
 import Login from "./pages/Login";
 import Registro from "./pages/Registro";
 import AuthProvider from "./context/AuthProvider";
@@ -20,7 +19,7 @@ import AuthContext from "./context/AuthContext";
 import Alerts from "./components/Alerts";
 import Empleados from "./pages/Empleados";
 import EmpleadosAlta from "./pages/EmpleadosAlta";
-import EmpleadosEliminar from "./pages/EmpleadosEliminar";
+
 import EmpleadosModificar from "./pages/EmpleadosModificar";
 import Balance from "./pages/Balance";
 import NoticiasDetalle from "./pages/NoticiasDetalle";
@@ -36,7 +35,7 @@ function App() {
       <Header />
       <AuthProvider>
         <Navigation login={login}/>
-        <AuthContext>
+        <AuthContext.Consumer>
           {
             context=>(
               <Routes>
@@ -55,10 +54,8 @@ function App() {
                     <Route path="empleados" element={<Empleados/>} />
                     <Route path="empleados/alta" element={<EmpleadosAlta/>} />
                     <Route path="empleados/modificar/:id" element={<EmpleadosModificar/>} />
-                    <Route path="empleados/eliminar/:id" element={<EmpleadosEliminar/>} />
                     <Route path="noticias/alta" element={<NoticiasAlta/>} />
                     <Route path="noticias/modificar/:id" element={<NoticiasModificar/>} />
-                    <Route path="noticias/eliminar/:id" element={<NoticiasEliminar/>} />
                   </>
                 }
                 {
@@ -75,9 +72,9 @@ function App() {
               </Routes>
             )
           }
-        </AuthContext>
-        </AuthProvider>
+        </AuthContext.Consumer>
       <Footer/>
+      </AuthProvider>
       </BrowserRouter>
     </div>
   );

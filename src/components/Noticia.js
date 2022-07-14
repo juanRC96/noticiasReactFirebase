@@ -1,8 +1,22 @@
 import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
+import { deleteImageNew, deleteNew, getByIdNews } from "../services/NoticiasServices";
 
 function Noticia(props) {
+
+  const handleDelete = async() => {
+    try{
+      const response = await getByIdNews(props.id);
+      const url = response.data().urlImagen;
+      await deleteImageNew(url)
+      await deleteNew(props.id)
+      props.setRefresh((old) => old + 1)
+    }catch(error){
+      console.log(error)
+    }
+  }
+
   return (
     <AuthContext>
       {
@@ -24,7 +38,7 @@ function Noticia(props) {
               context.userLogin &&
               <>
               <Link to={"/noticias/modificar/" + props.id}><Button>Modificar</Button></Link>
-              <Link to={"/noticias/eliminar/" + props.id}><Button variant="danger">Eliminar</Button></Link>
+              <Button variant="danger" onClick={handleDelete}>Eliminar</Button>
               </>
             }
           </Card.Body>
@@ -32,8 +46,6 @@ function Noticia(props) {
       </Col>
         )
       }
-      
-
       </AuthContext>
   );
 }
