@@ -25,12 +25,12 @@ const HomePage = (props) => {
         {news.map((n) => (
         <Carousel.Item key={n.id}>
           <Link to={"/noticias/detalle/"+n.id}><img src={n.data().urlImagen} alt={n.id}/></Link>
-          <Carousel.Caption>
+          <Link to={"/noticias/detalle/"+n.id}><Carousel.Caption>
             <div style={{backgroundColor:"rgba(0, 0, 0, .7)",padding:"1rem", borderRadius:"10px"}}>
             <h3>{n.data().titulo}</h3>
             <p>{n.data().subtitulo}</p>
             </div>
-          </Carousel.Caption>
+          </Carousel.Caption></Link>
         </Carousel.Item>
         ))}
       </Carousel>
