@@ -2,6 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 import React, { useEffect, useState } from "react";
 import { getFeaturedNews } from "../services/NoticiasServices";
 import { Link } from "react-router-dom";
+import NoticiasPage from "./NoticiasPage";
 
 const HomePage = (props) => {
 
@@ -18,7 +19,8 @@ const HomePage = (props) => {
   }, []);
 
   return (
-    <main className="holder">
+    <main>
+      <div className="holder">
       {
         loaded &&
         <Carousel>
@@ -35,35 +37,8 @@ const HomePage = (props) => {
         ))}
       </Carousel>
       }
-        <div className="contenedor">
-          <h2>Bienvenidos</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            iaculis interdum tincidunt. Etiam sagittis lacinia sodales.
-            Suspendisse aliquet metus eu sollicitudin aliquet. Sed erat ex,
-            hendrerit sit amet odio sed, laoreet interdum nibh. Praesent
-            suscipit, nisl nec tempor ultricies, justo sapien imperdiet metus,
-            ac tincidunt quam enim non sem. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec iaculis interdum tincidunt. Etiam
-            sagittis lacinia sodales. Suspendisse aliquet metus eu sollicitudin
-            aliquet. Sed erat ex, hendrerit sit amet odio sed, laoreet interdum
-            nibh. Praesent suscipit, nisl nec tempor ultricies, justo sapien
-            imperdiet metus, ac tincidunt quam enim non sem.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            iaculis interdum tincidunt. Etiam sagittis lacinia sodales.
-            Suspendisse aliquet metus eu sollicitudin aliquet. Sed erat ex,
-            hendrerit sit amet odio sed, laoreet interdum nibh. Praesent
-            suscipit, nisl nec tempor ultricies, justo sapien imperdiet metus,
-            ac tincidunt quam enim non sem. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec iaculis interdum tincidunt. Etiam
-            sagittis lacinia sodales. Suspendisse aliquet metus eu sollicitudin
-            aliquet. Sed erat ex, hendrerit sit amet odio sed, laoreet interdum
-            nibh. Praesent suscipit, nisl nec tempor ultricies, justo sapien
-            imperdiet metus, ac tincidunt quam enim non sem.
-          </p>
-        </div>
+      </div>
+        <NoticiasPage></NoticiasPage>
     </main>
   );
 };

@@ -26,37 +26,34 @@ function Noticia(props) {
         <div
           className="carta"
           style={{
-            width: "100%",
             marginLeft: "auto",
             marginRight: "auto",
-            marginUp: "1rem",
-            marginBottom: "1rem",
-            paddingLeft: "1rem",
-            paddingRight: "1rem",
+            marginTop: "1%",
+            padding:"1rem",
             display: "inline-block",
-            backgroundColor: "rgba(256,256,256,0.9)",
-            maxWidth: "45%",
-            minWidth: "20rem"
+            maxWidth: "30%",
+            minWidth: "20rem",
+            height:"100%"
           }}
         >
-          <p style={{ display: "inline-block" }}>{props.categoria}</p>
-          <p
-            style={{
-              float: "right",
-              display: "inline-block",
-              fontStyle: "italic",
-            }}
-          >
+          {
+            context.userLogin &&
+            <>
+              <p style={{ display: "inline-block" }}>{props.categoria}</p>
+              <p
+                style={{
+                float: "right",
+                display: "inline-block",
+                fontStyle: "italic",
+                }}
+              >
             {props.fecha}
           </p>
-          <Link
-            to={"/noticias/detalle/" + props.id}
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <h2 style={{ textAlign: "center" }}>{props.titulo}</h2>
-          </Link>
+            </>
+          }
+
           {props.urlImagen !== "" && (
-            <Link
+            <Link className="imagen-noticia"
               to={"/noticias/detalle/" + props.id}
               style={{ marginLeft: "auto", marginRight: "auto" }}
             >
@@ -65,26 +62,32 @@ function Noticia(props) {
                 src={props.urlImagen}
                 alt=""
                 style={{
-                  width: "80%",
+                  width: "100%",
+                  height:"18rem",
                   display: "block",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  marginUp: "1rem",
-                  marginBottom: "1rem",
+                  marginTop: "0.2rem",
+                  marginBottom: "0.2rem",
                   borderRadius: "5px",
                   objectFit: "cover",
                 }}
               />
             </Link>
           )}
-          <Link
+
+          <Link className="titulo"
             to={"/noticias/detalle/" + props.id}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <h5 style={{ textAlign: "center" }}>{props.subtitulo}</h5>
+            <h4 style={{ textAlign: "center" }}>{props.titulo}</h4>
           </Link>
 
           {context.userLogin && (
+            <>
+              <Link to={"/noticias/detalle/" + props.id} style={{ textDecoration: "none", color: "black" }}>
+                <h5 style={{ textAlign: "center" }}>{props.subtitulo}</h5>
+              </Link>
             <div style={{textAlign:"center"}}>
               <Link to={"/noticias/modificar/" + props.id}>
                 <Button>Modificar</Button>
@@ -93,6 +96,7 @@ function Noticia(props) {
                 Eliminar
               </Button>
             </div>
+            </>
           )}
         </div>
       )}

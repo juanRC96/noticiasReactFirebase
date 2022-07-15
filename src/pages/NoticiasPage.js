@@ -31,7 +31,7 @@ const NoticiasPage = () => {
     <AuthContext.Consumer>
       {
         context =>(
-          <div className="holder">
+          <div>
             {
               loading && 
               <Spinner variant="primary" animation="border" role="status" style={{width:"4rem", height:"4rem", position: "fixed", top: "50%", left: "50%"}}><span className="visually-hidden">Cargando noticias</span></Spinner>
@@ -40,9 +40,13 @@ const NoticiasPage = () => {
               context.userLogin &&
               <Button as={Link} to="/noticias/alta" style={{justifyContent:"center",display:"flex", marginBottom:"2rem"}}>Nueva noticia</Button>
             }
+            <div className="holder">
+            <div className="fondo-noticias">
             <Row style={{marginTop:"1rem",marginBottom:"1rem"}}>
               {news.map((n) => (<Noticia key={n.id} titulo={n.data().titulo} subtitulo={n.data().subtitulo} cuerpo={n.data().cuerpo} id={n.id} urlImagen={n.data().urlImagen} categoria={n.data().categoria} fecha={n.data().fecha} setRefresh={setRefresh}/>))}
             </Row>
+            </div>
+            </div>
             </div>
         )
       }

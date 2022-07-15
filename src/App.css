@@ -14,10 +14,16 @@
 /* HOMEPAGE */
 
 .contenedor{
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(240, 240, 240);
   padding: 2rem;
   margin-top: 2rem;
   border-radius: 10px;
+}
+
+.fondo-noticias{
+  background-color: rgba(240, 240, 240);
+  padding: 0;
+  margin-top: 2rem;
 }
 
 .carousel{
@@ -205,15 +211,23 @@ footer .derechos{
 
 /* NOTICIAS PAGE */
 
-.noticias{
-  width: 100%;
-  text-align: center;
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  background-color: rgb(240, 240, 240);
+.titulo :hover{
+  text-decoration: underline;
 }
+
+.imagen-noticia :hover{
+  opacity: 0.9;
+}
+
+.imagen-noticia img{
+  transition: transform .2s;
+}
+
+.imagen-noticia :hover{
+  transform: scale(1.02);
+}
+
+
 
 /* REGISTRO */
 
