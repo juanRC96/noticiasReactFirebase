@@ -25,7 +25,7 @@ function NoticiasDetalle(){
             }
             {
                 !loading &&
-                <div style={{marginTop:"1rem",width:"80%",backgroundColor:"white",marginRight:"auto",marginLeft:"auto", paddingLeft:"3%", paddingRight:"3%", paddingTop:"2rem", paddingBottom:"2rem",overflow: "hidden",borderRadius:"10px"}}>
+                <div style={{marginTop:"1rem",width:"80%",backgroundColor: "rgba(256,256,256,0.9)",marginRight:"auto",marginLeft:"auto", paddingLeft:"3%", paddingRight:"3%", paddingTop:"2rem", paddingBottom:"2rem",overflow: "hidden"}}>
                     <p style={{display:"inline-block"}}>{noticia.categoria}</p>
                     <p style={{display:"inline-block", float:"right", fontStyle:"italic"}}>{noticia.fecha}</p>
                     <h1 style={{textAlign:"center"}}>{noticia.titulo}</h1>

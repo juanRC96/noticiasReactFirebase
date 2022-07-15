@@ -34,10 +34,9 @@ function Noticia(props) {
             paddingLeft: "1rem",
             paddingRight: "1rem",
             display: "inline-block",
-            backgroundColor: "white",
+            backgroundColor: "rgba(256,256,256,0.9)",
             maxWidth: "45%",
-            minWidth: "20rem",
-            borderRadius: "10px"
+            minWidth: "20rem"
           }}
         >
           <p style={{ display: "inline-block" }}>{props.categoria}</p>

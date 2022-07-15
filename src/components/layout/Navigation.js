@@ -12,20 +12,20 @@ function Navigation() {
         context => (
           <Navbar bg="dark" expand="lg" variant="dark">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse className="justify-content-end">
             <Nav className="m-auto">
     
               {context.userLogin &&
               <>
-                <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
-                <Nav.Link as={Link} to="/mensajes" >Mensajes</Nav.Link>
-                <Nav.Link as={Link} to="/balance" >Balance</Nav.Link>
-                <Nav.Link as={Link} to="/empleados">Empleados</Nav.Link>
-                <Nav.Link as={Link} to="/empleados/alta">Crear empleado</Nav.Link>
-                <Nav.Link as={Link} to="/create">Crear usuario</Nav.Link>
+                <Nav.Link as={Link} to="/" style={{paddingLeft:"10px",paddingRight:"10px"}}>Home</Nav.Link>
+                <Nav.Link as={Link} to="/noticias" style={{paddingLeft:"10px",paddingRight:"10px"}}>Noticias</Nav.Link>
+                <Nav.Link as={Link} to="/mensajes" style={{paddingLeft:"10px",paddingRight:"10px"}}>Mensajes</Nav.Link>
+                <Nav.Link as={Link} to="/balance" style={{paddingLeft:"10px",paddingRight:"10px"}}>Balance</Nav.Link>
+                <Nav.Link as={Link} to="/empleados" style={{paddingLeft:"10px",paddingRight:"10px"}}>Empleados</Nav.Link>
+                <Nav.Link as={Link} to="/empleados/alta" style={{paddingLeft:"10px",paddingRight:"10px"}}>Crear empleado</Nav.Link>
+                <Nav.Link as={Link} to="/create" style={{paddingLeft:"10px",paddingRight:"10px"}}>Crear usuario</Nav.Link>
 
-                <NavDropdown title={context.userInfo.name+" "+context.userInfo.lastname} id="basic-nav-dropdown">
+                <NavDropdown title={context.userInfo.name+" "+context.userInfo.lastname} id="basic-nav-dropdown" style={{paddingLeft:"10px",paddingRight:"10px"}}>
                   <NavDropdown.Item onClick={context.logoutUser}>Cerrar sesion</NavDropdown.Item>
                 </NavDropdown> 
               </>
