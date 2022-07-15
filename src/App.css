@@ -79,7 +79,6 @@ footer .derechos{
 /* CONTACTO PAGE */
 
 .contacto{
-  display: flex;
   gap: 24px;
   background-color: rgb(240, 240, 240);
   padding: 1rem;

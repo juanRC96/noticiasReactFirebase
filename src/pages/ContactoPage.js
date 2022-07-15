@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Alert, Button, Form} from "react-bootstrap";
+import {Alert, Button, Form, Row} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { createMessage } from "../services/ContactoServices";
 
@@ -38,12 +38,11 @@ const ContactoPage = () => {
       <Alert variant="primary">Guardando mensaje...</Alert>
     }
 
-    <main className="holder contacto">
-      <div>
-        <h2>Contacto Rápido</h2>
-
-        <Form className="formulario">
-
+    <main className="holder">
+      <Row style={{marginTop:"1rem",marginLeft:"auto",marginRight:"auto"}}>
+      <div className="contenedor" style={{minWidth:"18rem",maxWidth:"45%",display:"inline-block",marginLeft:"auto",marginRight:"auto",marginTop:"1rem"}}>
+      <Form className="formulario">
+      <h2>Contacto Rápido</h2>
       <Form.Group className="linea">
         <Form.Label>Nombre</Form.Label>
         <Form.Control type="text" name="nombre" onChange={handleChange}/>
@@ -73,9 +72,8 @@ const ContactoPage = () => {
         Enviar
       </Button>
     </Form>
-
-      </div>
-      <div className="datos">
+    </div>
+      <div className="contenedor" style={{minWidth:"18rem",maxWidth:"45%",display:"inline-block",marginLeft:"auto",marginRight:"auto",marginTop:"1rem",padding:"3rem"}}>
         <h2>Otras vias de comunicacion</h2>
         <p>
           Tambien puede contactarse con nosotros usando los siguientes medios
@@ -85,6 +83,7 @@ const ContactoPage = () => {
           <li>Email: tecnonews@mail.com</li>
         </ul>
       </div>
+      </Row>
     </main>
     </>
   );
