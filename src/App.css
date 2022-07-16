@@ -228,6 +228,10 @@ footer .derechos{
   transition: transform .2s;
 }
 
+.brand h2{
+  transition: transform .2s;
+}
+
 .brand :hover{
   transform: scale(1.1);
 }
