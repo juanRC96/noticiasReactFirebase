@@ -32,7 +32,7 @@ function Noticia(props) {
             padding:"1rem",
             display: "inline-block",
             maxWidth: "30%",
-            minWidth: "20rem",
+            minWidth: "22rem",
             height:"100%"
           }}
         >

@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React,{useState} from "react"
 
-import Header from "./components/layout/Header";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
 
@@ -32,7 +31,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
       <AuthProvider>
         <Navigation login={login}/>
         <AuthContext.Consumer>

@@ -8,6 +8,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3rem;
   overflow: "hidden";
 }
 
@@ -16,22 +17,21 @@
 .contenedor{
   background-color: rgba(240, 240, 240);
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
   border-radius: 10px;
 }
 
 .fondo-noticias{
   background-color: rgba(240, 240, 240);
-  padding: 0;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .carousel{
-  height: 420px;
+  height: 450px;
 }
 
 .carousel-item{
-  height: 420px;
+  height: 450px;
 }
 
 .carousel-item img{
@@ -62,27 +62,6 @@ footer .redes img:hover{
 
 footer .derechos{
   margin-top: 20px;
-}
-
-/* HEADER */
-.header{
-  margin-left: 1rem;
-}
-
-.header img{
-  display: inline-block;
-  transition: transform .2s;
-}
-
-.header h1{
-  display: inline-block;
-  color: white;
-  margin-left: 1.5rem;
-  transition: transform .2s;
-}
-
-.header :hover{
-  transform: scale(1.1);
 }
 
 /* CONTACTO PAGE */
@@ -241,4 +220,14 @@ footer .derechos{
 
 .formulario .linea{
   padding: 10px;
+}
+
+/* NAVIGATION */
+
+.brand img{
+  transition: transform .2s;
+}
+
+.brand :hover{
+  transform: scale(1.1);
 }
