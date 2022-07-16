@@ -40,6 +40,11 @@
   object-fit: cover;
 }
 
+.carousel-item img :hover{
+  height: 1rem;
+  width: 150%;
+}
+
 /* FOOTER */
 footer{
   background-color: rgb(240, 240, 240);
