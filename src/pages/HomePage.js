@@ -108,7 +108,6 @@ const HomePage = (props) => {
           backgroundColor: "black",
         }}
       >
-        <h1>Ultimas noticias</h1>
       </div>
       <NoticiasPage></NoticiasPage>
     </main>

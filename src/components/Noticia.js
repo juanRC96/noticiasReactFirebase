@@ -29,8 +29,6 @@ function Noticia(props) {
             marginLeft: "auto",
             marginRight: "auto",
             marginTop: "1%",
-            padding:"1rem",
-            display: "inline-block",
             maxWidth: "30%",
             minWidth: "22rem",
             height:"100%"

@@ -42,7 +42,28 @@ const NoticiasPage = () => {
             }
             <div className="holder">
             <div className="fondo-noticias">
-            <Row style={{marginTop:"1rem",marginBottom:"1rem"}}>
+              {
+                categoria===undefined &&
+                <h1 style={{textAlign:"center"}}>Ultimas noticias</h1>
+              }
+              {
+                categoria==="gaming" &&
+                <h1 style={{textAlign:"center"}}>Gaming</h1>
+              }
+              {
+                categoria==="moviles" &&
+                <h1 style={{textAlign:"center"}}>Móviles</h1>
+              }
+              {
+                categoria==="ciencia" &&
+                <h1 style={{textAlign:"center"}}>Ciencia</h1>
+              }
+              {
+                categoria==="reviews" &&
+                <h1 style={{textAlign:"center"}}>Reviews</h1>
+              }
+              
+            <Row style={{marginTop:"1rem",marginBottom:"1rem",width:"100%",marginRight:"auto",marginLeft:"auto"}}>
               {news.map((n) => (<Noticia key={n.id} titulo={n.data().titulo} subtitulo={n.data().subtitulo} cuerpo={n.data().cuerpo} id={n.id} urlImagen={n.data().urlImagen} categoria={n.data().categoria} fecha={n.data().fecha} setRefresh={setRefresh}/>))}
             </Row>
             </div>

@@ -2,12 +2,10 @@
 
 .App {
   background-image: url("/public/images/background.jpg");
+  width: 100%;
 }
 
 .holder{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 3rem;
   overflow: "hidden";
 }
@@ -16,14 +14,19 @@
 
 .contenedor{
   background-color: rgba(240, 240, 240);
-  padding: 2rem;
-  margin-top: 0rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border-radius: 10px;
+  width: 90%;
 }
 
 .fondo-noticias{
   background-color: rgba(240, 240, 240);
-  margin-top: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .carousel{
