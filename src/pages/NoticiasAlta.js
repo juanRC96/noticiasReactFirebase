@@ -94,6 +94,7 @@ function NoticiasAlta() {
             <option value="gaming">Gaming</option>
             <option value="reviews">Review</option>
             <option value="moviles">Moviles</option>
+            <option value="novedades">Novedades</option>
           </Form.Select>
         </Form.Group>
 

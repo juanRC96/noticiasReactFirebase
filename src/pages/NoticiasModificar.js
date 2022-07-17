@@ -75,6 +75,7 @@ function NoticiasModificar() {
             <option value="gaming">Gaming</option>
             <option value="reviews">Review</option>
             <option value="moviles">Moviles</option>
+            <option value="novedades">Novedades</option>
             {errors.titulo && <span>El campo es obligatorio</span>}
           </Form.Select>
       </Form.Group>
