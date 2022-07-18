@@ -21,8 +21,6 @@ const HomePage = (props) => {
     request();
   }, []);
 
-
-
   return (
     <main>
       <div className="holder">
@@ -40,7 +38,7 @@ const HomePage = (props) => {
 
                 <Link to={"/noticias/detalle/" + n.id}>
                   <Carousel.Caption>
-                    <div
+                    <div className="texto"
                       style={{
                         backgroundColor: "rgba(0, 0, 0, .7)",
                         padding: "1rem",

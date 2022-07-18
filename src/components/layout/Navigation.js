@@ -13,7 +13,7 @@ function Navigation() {
     <AuthContext.Consumer>
       {
         context => (
-          <div style={{paddingTop:"5rem"}}>
+          <div style={{paddingTop:"4.5rem"}}>
           <Navbar bg="dark" expand="lg" variant="dark" expanded={expand} fixed="top">
           <Navbar.Toggle onClick={() => setExpand(expand ? false : "expanded")} aria-controls="basic-navbar-nav"/>
 
