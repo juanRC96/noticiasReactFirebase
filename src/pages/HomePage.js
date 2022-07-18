@@ -4,15 +4,18 @@ import { getFeaturedNews } from "../services/NoticiasServices";
 import { Link } from "react-router-dom";
 import NoticiasPage from "./NoticiasPage";
 import Novedades from "../components/Novedades";
+import Cargando from "../components/Cargando";
 
 const HomePage = (props) => {
   const [news, setNews] = useState([]);
+  const [loading,setLoading] = useState(true);
   const [loaded, setLoaded] = useState(false);
   
   useEffect(() => {
     const request = async () => {
       const noticias = await getFeaturedNews();
       setNews(noticias);
+      setLoading(false);
       setLoaded(true);
     };
     request();
@@ -23,6 +26,10 @@ const HomePage = (props) => {
   return (
     <main>
       <div className="holder">
+        {
+          loading &&
+          <Cargando/>
+        }
         {loaded && (
           <Carousel>
             {news.map((n) => (

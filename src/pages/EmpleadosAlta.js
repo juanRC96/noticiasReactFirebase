@@ -18,6 +18,7 @@ function EmpleadosAlta() {
   const [loadingImg, setLoadingImg] = useState("0");
   const [imageAdded, setImageAdded] = useState(false);
   const [success,setSuccess] = useState(false);
+  const [allowUpload, setAllowUpload] = useState(false);
   const navigate = useNavigate();
 
   //manejo envio formulario
@@ -69,6 +70,11 @@ function EmpleadosAlta() {
 
   const handleImage = (event) => {
     setImage(event.target.files[0]);
+    if (event.target.files[0] !== undefined) {
+      setAllowUpload(true);
+    } else if (event.target.files[0] === undefined) {
+      setAllowUpload(false);
+    }
   };
 
   return (
@@ -109,43 +115,48 @@ function EmpleadosAlta() {
                 <Form.Label>Imagen</Form.Label>
                 <Form.Control type="file" name="url" onChange={handleImage} />
               </Form.Group>
-              <Button variant="primary" type="submit" onClick={handleUpload}>
-                Subir
-              </Button>
+              {allowUpload && (
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    onClick={handleUpload}
+                  >
+                    {(loadingImg === "0" || loadingImg === "2" || loadingImg === "3") && 
+                    <>Subir</>}
+                    
+                    {loadingImg === "1" && (
+                      <>
+                        Subiendo...
+                        <Spinner
+                          variant="light"
+                          animation="border"
+                          role="status"
+                          style={{
+                            marginLeft: "2rem",
+                            width: "1rem",
+                            height: "1rem",
+                          }}
+                        ></Spinner>
+                      </>
+                    )}
+                  </Button>
+                )}
               {imageAdded === false && (
                 <>
                   <Alerts variant="warning" text="No hay imagen cargada" />
                 </>
               )}
               {loadingImg === "1" && (
-                <>
-                  <Spinner
-                    variant="primary"
-                    animation="border"
-                    role="status"
-                    style={{
-                      marginLeft: "2rem",
-                      width: "1rem",
-                      height: "1rem",
-                    }}
-                  >
-                    <span className="visually-hidden">Cargando noticias</span>
-                  </Spinner>
                   <Alerts variant="primary" text="Subiendo imagen..." />
-                </>
               )}
               {loadingImg === "2" && (
-                <>
                   <Alerts variant="success" text="Imagen subida con exito" />
-                </>
               )}
               {loadingImg === "3" && (
-                <>
                   <Alerts
                     variant="danger"
                     text="Hubo un problema al subir la imagen"
                   />
-                </>
               )}
             </Form>
           </Accordion.Body>

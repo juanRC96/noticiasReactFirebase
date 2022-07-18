@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Row, Spinner } from "react-bootstrap";
+import Cargando from "../components/Cargando";
 import Mensaje from "../components/Mensaje";
 import { getAllMessages } from "../services/ContactoServices";
 
@@ -27,7 +28,7 @@ function Mensajes(){
         <div className="holder">
             <div className="contenedor">
             {loading && 
-            <Spinner variant="primary" animation="border" role="status" style={{width:"4rem", height:"4rem", position: "fixed", top: "50%", left: "50%"}}><span className="visually-hidden">Cargando noticias</span></Spinner>
+            <Cargando/>
             }
             <h1>Mensajes</h1>
             <Row style={{marginLeft:"auto",marginRight:"auto"}}>

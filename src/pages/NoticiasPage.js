@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Noticia from "../components/Noticia";
 import { getAllNews, getNewsByCat } from "../services/NoticiasServices";
 import AuthContext from "../context/AuthContext";
+import Cargando from "../components/Cargando";
 
 const NoticiasPage = () => {
   const {categoria} = useParams();
@@ -35,9 +36,7 @@ const NoticiasPage = () => {
           <div>
             {
               loading && 
-              <div>
-              <Spinner variant="primary" animation="border" role="status" style={{width:"4rem", height:"4rem", position: "fixed", top: "50%", left: "50%",marginLeft:"-2rem"}}><span className="visually-hidden">Cargando noticias</span></Spinner>
-              </div>
+              <Cargando/>
             }
             {
               context.userLogin &&
