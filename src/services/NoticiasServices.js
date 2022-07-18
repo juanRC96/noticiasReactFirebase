@@ -6,7 +6,7 @@ export async function getAllNews(){
 }
 
 export async function getNewsByCat(categoria){
-    const querySnapshot = await firebase.firestore().collection("noticias").where("categoria","==",categoria).get()
+    const querySnapshot = await firebase.firestore().collection("noticias").where("categoria","==",categoria).orderBy("fecha","desc").get()
     return querySnapshot.docs
 }
 

@@ -25,20 +25,18 @@ function NoticiasDetalle(){
             }
             {
                 !loading &&
-                <div style={{marginTop:"1rem",width:"100%",backgroundColor: "rgb(240,240,240)",marginRight:"auto",marginLeft:"auto", paddingLeft:"3%", paddingRight:"3%", paddingTop:"2rem", paddingBottom:"2rem",overflow: "hidden"}}>
+                <div style={{marginTop:"1rem",maxWidth:"65rem",backgroundColor: "rgb(240,240,240)",marginRight:"auto",marginLeft:"auto", paddingLeft:"3%", paddingRight:"3%", paddingTop:"2rem", paddingBottom:"2rem",overflow: "hidden"}}>
                     <p style={{display:"inline-block"}}>{noticia.categoria}</p>
                     <p style={{display:"inline-block", float:"right", fontStyle:"italic"}}>{noticia.fecha}</p>
                     <h1 style={{textAlign:"center"}}>{noticia.titulo}</h1>
                     <p style={{textAlign:"center",fontSize:"23px"}}>{noticia.subtitulo}</p>
                     
-                    <div style={{float:"right",width:"45%",marginLeft:"3%"}}>
-                        <img src={noticia.urlImagen} alt="" style={{width:"100%", borderRadius:"10px"}}/>
+                    <div style={{width:"80%",marginLeft:"auto",marginRight:"auto"}}>
+                        <img src={noticia.urlImagen} alt="" style={{width:"100%",maxHeight:"30rem" ,borderRadius:"10px",objectFit:"cover"}}/>
                         <p style={{textAlign:"center",fontStyle:"italic"}}>{noticia.epigrafe}</p>
                     </div>
                     <p style={{fontSize:"17px"}}>{noticia.cuerpo}</p>
                     <p style={{marginTop:"2rem",fontStyle:"italic"}}>Autor: {noticia.autor}</p>
-                    
-                    
                 </div>
             }
         </>
