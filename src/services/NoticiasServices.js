@@ -1,7 +1,7 @@
 import firebase from "../config/firebase";
 
 export async function getAllNews(){
-    const querySnapshot = await firebase.firestore().collection("noticias").get()
+    const querySnapshot = await firebase.firestore().collection("noticias").orderBy("fecha","desc").get()
     return querySnapshot.docs
 }
 
